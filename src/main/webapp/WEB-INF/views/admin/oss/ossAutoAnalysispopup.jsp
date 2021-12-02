@@ -606,7 +606,6 @@
 								data : JSON.stringify(rowdata),
 								dataType : 'json',
 								cache : false,
-								async: false,
 								contentType : 'application/json',
 								success: function(resultData){
 									result.push(resultData);

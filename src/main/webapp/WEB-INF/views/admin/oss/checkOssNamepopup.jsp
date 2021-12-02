@@ -153,7 +153,6 @@
 									data : JSON.stringify(rowdata),
 									dataType : 'json',
 									cache : false,
-									async: false,
 									contentType : 'application/json',
 									success: function(resultData){
 										if(resultData.isValid == true){
@@ -225,7 +224,6 @@
 									data : JSON.stringify(rowdata),
 									dataType : 'json',
 									cache : false,
-									async: false,
 									contentType : 'application/json',
 									success: function(resultData){
 										if(resultData.isValid == "true"){
@@ -270,7 +268,6 @@
 							type : 'GET',
 							dataType : 'json',
 							cache : false,
-							async: false,
 							data : {ossName : ossName},
 							contentType : 'application/json',
 							success : function(data){

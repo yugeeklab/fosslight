@@ -113,7 +113,6 @@
 				type: 'POST',
 				url: "/system/user/getDivisionList",
 				data: JSON.stringify({"cdNo" : code}),
-				async: false,
 				contentType : 'application/json',
 				success : function(data){
 					if(data != null){

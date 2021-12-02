@@ -36,7 +36,6 @@ var fn_grid_com = {
 			return $.ajax({
 				type: 'GET',
 				url: "/project/getOssVersions",
-				async: false,
 				data: {ossName : ossName },
 				headers: {
 					'Content-Type': 'application/json'
@@ -78,7 +77,6 @@ var fn_grid_com = {
 			return $.ajax({
 				type: 'GET',
 				url: "/project/getOssIdLicenses",
-				async: false,
 				data: {
 						ossName : ossName,
 						ossVersion : ossVersion 
@@ -778,7 +776,6 @@ var fn_grid_com = {
 					type : 'GET',
 					dataType : 'json',
 					cache : false,
-					async: false,
 					data : {ossName : ossName},
 					contentType : 'application/json',
 					success : function(data){
@@ -830,7 +827,6 @@ var fn_grid_com = {
 					type : 'GET',
 					dataType : 'json',
 					cache : false,
-					async: false,
 					data : {filename : filename},
 					contentType : 'application/json',
 					success : function(data){
@@ -1066,7 +1062,6 @@ var fn_grid_com = {
 			$.ajax({
 				url : '/checkLicenseText/valid',
 				cache : false,
-				async: false,
 				data : JSON.stringify({ "prjId" : _prjId , "regType" : _type}),
 				type : 'POST',
 				dataType : 'json',
@@ -1099,7 +1094,6 @@ var fn_grid_com = {
 			$.ajax({
 				url : '/checkLicenseText/start',
 				cache : false,
-				async: false,
 				data : JSON.stringify({ "prjId" : _prjId }),
 				type : 'POST',
 				dataType : 'json',

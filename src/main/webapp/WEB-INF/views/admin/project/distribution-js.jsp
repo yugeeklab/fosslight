@@ -991,7 +991,6 @@
 		return $.ajax({
 			type: 'GET',
 			data: {code:cd},
-			async:false,
 			url: "/project/getCategoryCode",
 			success : function(json){
 				if(json != null){
@@ -1019,7 +1018,6 @@
 		return $.ajax({
 			type: 'GET',
 			data: {code:cd},
-			async:false,
 			dataType:'json',
 			url: "/project/getCategoryCodeToJson",
 			success : function(json){

@@ -1731,7 +1731,6 @@ var sampleFile =  ${ct:getAllValuesJson(ct:getConstDef('CD_SAMPLE_FILE'))};
 					type : 'GET',
 					dataType : 'json',
 					cache : false,
-					async : false,
 					success : function(data){
 						var status = data.status;
 						var editStatus = $("input[name=status]").val();

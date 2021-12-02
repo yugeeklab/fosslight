@@ -1809,7 +1809,6 @@
 		return $.ajax({
 			type: 'GET',
 			data: {code:cd},
-			async:false,
 			dataType:'json',
 			url: "/project/getCategoryCodeToJson",
 			success : function(json){

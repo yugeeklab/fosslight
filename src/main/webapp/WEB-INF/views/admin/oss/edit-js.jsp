@@ -514,7 +514,6 @@
 									type : 'GET',
 									dataType : 'json',
 									cache : false,
-									async: false,
 									data : {ossName : ossName},
 									contentType : 'application/json',
 									success : function(data){
@@ -1557,7 +1556,6 @@
 				data : JSON.stringify(postData),
 				dataType : 'json',
 				cache : false,
-				async : false,
 				contentType : 'application/json',
 				success : function(json){
 					flag = json.vFlag;

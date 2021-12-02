@@ -1176,7 +1176,6 @@ var com_fn = {
 			data : JSON.stringify({"prjId" : "${project.prjId}"}),
 			dataType : 'json',
 			cache : false,
-			async : false,
 			contentType : 'application/json',
 			success : function(data){
 				var status = data.identificationStatus||"";

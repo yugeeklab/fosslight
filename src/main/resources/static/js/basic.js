@@ -384,7 +384,7 @@ function createTabInFrame(tabNm, tabLk){
 	
 }
 function createTabInFrameWithCondition(tabNm, tabLk, sesKey, sesVal){
-	$.ajax({	type: 'GET',url:'/sessionKeyValSave/'+sesKey+'/'+sesVal,async:false,data:{'sesKey':sesKey, 'sesVal':sesVal},headers: {'Content-Type': 'application/json'}});
+	$.ajax({	type: 'GET',url:'/sessionKeyValSave/'+sesKey+'/'+sesVal,data:{'sesKey':sesKey, 'sesVal':sesVal},headers: {'Content-Type': 'application/json'}});
 	
 	var tabData = [tabNm, tabLk];
 	var data = {
@@ -1914,7 +1914,6 @@ function showHelpLink(id, target){
 			type: 'GET',
 			url: CTX_PATH+"/system/processGuide/getProcessGuide",
 			data: {"id":id},
-			async:false,
 			success : function(data){
 				if(data.processGuide){
 					var contents = data.processGuide.contents;
