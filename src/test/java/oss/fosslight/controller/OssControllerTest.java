@@ -157,6 +157,20 @@ public class OssControllerTest {
                 });
     }
 
+    @Test
+    @DisplayName("oss autocomplete should be success")
+    void ossAutoCompleteShouldBeSuccess() throws Exception{
+        final String OSS_LIST_LENGTH = "23";
+
+        mockMvc.perform(get("/oss/autoCompleteAjax")
+                .header("user-agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36"))
+                .andExpect(status().isOk())
+                .andDo(result -> {
+                    List<OssMaster> responseList = new ObjectMapper().readValue(result.getResponse().getContentAsString(), List.class);
+                    assertThat(responseList.size()).isEqualTo(OSS_LIST_LENGTH);
+                });
+    }
+
     private void assertOssAdded(MockHttpServletResponse response) throws Exception {
         Map<String, String> responseMap = new ObjectMapper().readValue(response.getContentAsString(), Map.class);
         String ossId = responseMap.get("ossId");
